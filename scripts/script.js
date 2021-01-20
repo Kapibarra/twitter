@@ -1,15 +1,28 @@
-class Post {
+
+
+class Posts {
     constructor() {
-this.userName
-this.nickname
-this.postData
-this.text
-this.img
-this.likes
 
     }
+}
+
+
+class Post {
+    constructor() {
+this.userName = param.userName
+this.nickname = param.nickname
+this.postDate = param.postDate
+this.text = param.text
+this.img = param.img
+this.likes = param.likes
+this.liked = false
+
+}
 
     changeLike() {
-
+this.liked = !this.liked
+if ( this.liked) {
+    this.likes++
+}
     }
 }
