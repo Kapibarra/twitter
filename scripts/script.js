@@ -1,18 +1,30 @@
+class Twitter {
+  constructor(param) {
+    this.tweets = new Posts({
+        posts: [] 
+    });
+    this.elements = {
+        listElem : document.querySelector(param.listElem)
+    }
+  }
+  renderPosts() {}
+  showUserPost() {}
+  showLikesPosts() {}
+  showAllPost() {}
+  openModal() {}
+}
+
 class Posts {
   constructor(param) {
-    this.tweets = param.posts;
+    this.posts = param.posts;
   }
   addPost(tweet) {
-const post = new Post(tweet)
-this.tweets.push(post)
+    const post = new Post(tweet);
+    this.posts.push(post);
   }
-  deletePost(id) {
+  deletePost(id) {}
 
-  }
-
-  likePost(id) {
-      
-  }
+  likePost(id) {}
 }
 
 class Post {
@@ -36,3 +48,8 @@ class Post {
     }
   }
 }
+
+
+new Twitter({
+    listElem: '.tweet-list'
+})
