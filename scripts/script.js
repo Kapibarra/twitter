@@ -1,12 +1,11 @@
 class Twitter {
-  constructor(param) {
-    this.tweets = new Posts({
-        posts: [] 
-    });
-    this.elements = {
-        listElem : document.querySelector(param.listElem)
-    }
-  }
+  constructor({listElem}) {
+    this.tweets = new Posts()
+        this.elements = {
+          listElem : document.querySelector(param.listElem)
+      }
+    };
+
   renderPosts() {}
   showUserPost() {}
   showLikesPosts() {}
@@ -15,8 +14,7 @@ class Twitter {
 }
 
 class Posts {
-  constructor(param) {
-    const {posts} = param
+  constructor({posts = []} = {}) {
     this.posts = posts;
   }
   addPost(tweet) {
