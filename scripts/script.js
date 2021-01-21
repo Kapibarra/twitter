@@ -16,7 +16,8 @@ class Twitter {
 
 class Posts {
   constructor(param) {
-    this.posts = param.posts;
+    const {posts} = param
+    this.posts = posts;
   }
   addPost(tweet) {
     const post = new Post(tweet);
