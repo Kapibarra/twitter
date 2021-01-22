@@ -28,7 +28,7 @@ class Posts {
 
 class Post {
   constructor() {
-    this.id = param.id;
+    this.id = param.id ? param.id :  this.generateID()
     this.userName = param.userName;
     this.nickname = param.nickname;
     this.postDate = param.postDate;
@@ -36,6 +36,7 @@ class Post {
     this.img = param.img;
     this.likes = param.likes;
     this.liked = false;
+   
   }
 
   changeLike() {
@@ -45,6 +46,10 @@ class Post {
     } else {
       this.likes--;
     }
+  }
+
+  generateID() {
+    return (new Date )
   }
 }
 
